@@ -61,7 +61,7 @@ void do_switch(thread_t *from, thread_t *to)
 //create a thread
 int thread_create(thread_t *t, int id, thread_handler_t handler)
 {
-    int stack_size = (1 << 20);
+    int stack_size = (1 << 20);  //fixed 1M for demo
     void *stack_top = malloc(stack_size);  //or mmap with stack type sepcified
 
     t->id = id;
