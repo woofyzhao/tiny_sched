@@ -43,19 +43,6 @@ restore_context:
 
 	.size restore_context,.-restore_context
 
-##
-#  @brief replace_esp
-##
-	.text
-	.align 4
-	.globl replace_esp
-	.type replace_esp, @function
-replace_esp:
-	movq %rsi,8(%rdi)
-	ret
-
-	.size replace_esp,.-replace_esp
-
 #else
 #error "Linux cpu arch not supported"
 #endif
